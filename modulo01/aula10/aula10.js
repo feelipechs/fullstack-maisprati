@@ -41,23 +41,23 @@
 //     console.log(`A média foi de ${media.toFixed(2)}. Turma reprovada.`);
 // }
 
-const biblioteca = [
-    {
-        titulo: '12 Regras para Vida', autor: 'Jordan Peterson', ano: 1923
-    },
-    {
-        titulo: 'O Robbit', autor: 'J.R.R. Tolkien', ano: 1937
-    },
-    {
-        titulo: 'Senhora do Jogo', autor: 'Sidney Sheldon', ano: 2009
-    },
-    {
-        titulo: 'Zé Carioca', autor: 'Disney', ano: 1940
-    },
-    {
-        titulo: 'Nação Dopamina', autor: 'Anna Lembke', ano: 2021
-    }
-]
+// const biblioteca = [
+//     {
+//         titulo: '12 Regras para Vida', autor: 'Jordan Peterson', ano: 1923
+//     },
+//     {
+//         titulo: 'O Robbit', autor: 'J.R.R. Tolkien', ano: 1937
+//     },
+//     {
+//         titulo: 'Senhora do Jogo', autor: 'Sidney Sheldon', ano: 2009
+//     },
+//     {
+//         titulo: 'Zé Carioca', autor: 'Disney', ano: 1940
+//     },
+//     {
+//         titulo: 'Nação Dopamina', autor: 'Anna Lembke', ano: 2021
+//     }
+// ]
 
 /*
     * For of para iterar sobre o array biblioteca
@@ -138,5 +138,5 @@ const biblioteca = [
 
 // console.log(... tituloArtigo);
 
-let listaTimes = ['Grêmio', 'Football Porto Alegrense'];
-let lista
+// let listaTimes = ['Grêmio', 'Football Porto Alegrense'];
+// let lista
