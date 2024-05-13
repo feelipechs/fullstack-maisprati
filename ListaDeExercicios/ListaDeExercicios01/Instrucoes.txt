@@ -21,7 +21,3 @@ Exercício 13: Insira um valor, ele será o multiplicador dos números 1, 2, 3, 
 Exercício 14: Insira os números decimais desejados, mostrará a média aritmética deles. Digite 0 para finalizar o algoritmo
 Exercício 15: Semelhante ao exercício 14, insira os números decimais e os pesos respectivamente e ele mostrará a média ponderada. Digite 0 para finalizar o algor
 Exercício 16: Basta rodar o código
-
----
-
-Professor, teve coisas novas que aprendi conforme fui fazendo os exercícios, então deixei alguns como eu fiz na hora pra ver a evolução que tive. (coisas básicas)
