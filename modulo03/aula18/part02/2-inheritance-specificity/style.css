@@ -1,0 +1,29 @@
+* {
+    color: blue;
+}
+
+h1 {
+    color: red !important;
+}
+
+h1#textoPrincipal {
+    color: yellow;
+}
+
+#textoPrincipal {
+    color: green;
+}
+
+/*
+    Se o seletor for mais específico que o outro a regra mais específica será aplicada.
+*/
+
+/*
+    Seletores Universais
+    Tipos de Seletores
+    Classes Seletores
+    Atributos Seletores
+    Pseudo-classes
+    Seletores ID
+    Estilo Inline
+*/

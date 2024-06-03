@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Javascript aplicando CSS</title>
+
+    <style>
+        body {
+        background-color: blueviolet;
+        }
+
+    .quadrado {
+        background-color: black;
+        border: 1px solid red;
+        height: 100px;
+        width: 100px;
+    }
+    </style>
+
+    <script>
+        function trocarEstilizacao(estilizacao) {
+            const quadrado = document.getElementById("quadrado");
+
+            if (estilizacao === "color1") {
+                quadrado.style.backgroundColor = "rgba(250, 250, 250)";
+            } else if (estilizacao === "color2") {
+                quadrado.style.backgroundColor = "rgba(200, 200, 200)";
+            } else if (estilizacao === "color3") {
+                quadrado.style.backgroundColor = "rgba(150, 150, 150)";
+            } else if (estilizacao === "color4") {
+                quadrado.style.backgroundColor = "rgba(100, 100, 100)";
+            } else if (estilizacao === "color5") {
+                quadrado.style.backgroundColor = "rgba(50, 50, 50)";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="trocarEstilizacao('color1')" class="color1">Branco</button>
+    <button type="button" onclick="trocarEstilizacao('color2')" class="color2">Cinza Claro</button>
+    <button type="button" onclick="trocarEstilizacao('color3')" class="color3">Cinza Médio</button>
+    <button type="button" onclick="trocarEstilizacao('color4')" class="color4">Cinza Escuro</button>
+    <button type="button" onclick="trocarEstilizacao('color5')" class="color5">Quase Preto</button>
+
+    <div class="quadrado" id="quadrado"></div>
+</body>
+</html>
