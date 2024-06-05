@@ -1,0 +1,17 @@
+table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+th {
+    color: white;
+    padding: 5px;
+}
+
+.th-claro {
+    background-color: gray;
+}
+
+.th-escuro {
+    background-color: rgb(70, 70, 70);
+}
