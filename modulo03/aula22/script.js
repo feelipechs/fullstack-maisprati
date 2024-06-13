@@ -1,10 +1,10 @@
 class Task {
-    constructor(year, month, day, type, description) {
-        this.year = year;
-        this.month = month;
-        this.day = day;
-        this.type = type;
-        this.description = description;
+    constructor(nome, email, data, servico, valor) {
+        this.nome = nome;
+        this.email = email;
+        this.data = data;
+        this.servico = servico;
+        this.valor = valor;
     }
 
     validateData() {
@@ -17,22 +17,40 @@ class Task {
     }
 }
 
-function registerTask() {
-    const year = document.getElementById("year").value;
-    const month = document.getElementById("month").value;
-    const day = document.getElementById("day").value;
-    const type = document.getElementById("type").value;
-    const description = document.getElementById("description").value;
+class Database {
 
-    const task = new Task(year, month, day, type, description);
+    constructor() {
+        const id = localStorage.getItem("id");
 
-    if (task.validateData()) {
-        Database.createTask(task);
+        if (id === null) {
+            localStorage.setItem("id", 0);
+        }
+    }
+
+    createTask(task) {
+        const id = getNextId();
+        localStorage.setItem(id, JSON.stringify(task));
+        localStorage.setItem("id", id);
     }
 }
 
-class Database {
-    createTask(task) {
-        localStorage.setItem(id,JSON.stringify(task));
+const database = new Database();
+
+function getNextId() {
+    const nextId = localStorage.getItem("id");
+    return parseInt(nextId) + 1;
+}
+
+function registerTask() {
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const data = document.getElementById("data").value;
+    const servico = document.getElementById("servico").value;
+    const valor = document.getElementById("valor").value;
+
+    const task = new Task(nome, email, data, servico, valor);
+
+    if (task.validateData()) {
+        database.createTask(task);
     }
 }

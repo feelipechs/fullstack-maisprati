@@ -1,0 +1,9 @@
+#box {
+    width: 400px;
+    height: 400px;
+    background: url('https://t2.tudocdn.net/366480?w=824&h=494');
+}
+
+#box h1 {
+    background: rgb(255, 255, 255, 0.8);
+}
