@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <h1>
+                    <span>Golaço</span>
+                    <span class="fist">&#x1F975;</span>
+                </h1>
+            </a>
+            <ul>
+                <li class = "nav-item"><a href="#" class="nav-link">Página Inicial</a></li>
+                <li class = "nav-item"><a href="#" class="nav-link">Serviços</a></li>
+                <li class = "nav-item"><a href="#" class="nav-link">Clientes</a></li>
+                <li class = "nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                <li class = "nav-item"><a href="#" class="nav-link">Contato</a></li>
+                <li class = "nav-item"><a href="#" class="nav-link">Trabalhe conosco</a></li>
+            </ul>
+            <div class="theme-switch">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="label">
+                    <ion-icon name="partly-sunny-outline" class="sun"></ion-icon>
+                    <ion-icon name="moon-outline" class="moon"></ion-icon>
+                    <div class="switcher"></div>
+                </label>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="intro-text">
+                <h1>Puskás do NJ<span></span></h1>
+                <p>O gol de Neymar contra o Flamengo em 2011 foi mais que um gol; foi uma obra-prima. Como um pintor diante de sua tela, ele driblou os defensores com maestria, cada movimento calculado. O momento culminante foi um drible desconcertante seguido por um chute preciso, pintando a bola no canto superior da rede. Foi um momento de genialidade que transcendeu o esporte, uma verdadeira obra de arte em ação.</p>
+                <a class="btn red" href="#">Inscreva-se</a>
+                <a class="btn blue" href="#">Saiba mais</a>
+            </div>
+            <div class="iframe">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/moKF34zcSsI?si=DzW3zT5gU0Pkq1po" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="stand-1"></div>
+                <div class="stand-2"></div>
+            </div>
+        </section>
+
+        <section class="secondSection">
+            <div class="carousel">
+                <div class="faixa">
+                    <button class="flecha" onclick="back()"> &lt; </button>
+                </div>
+                <div class="corousel-images">
+                    <img id="carousel-slot1" src="./assets/images/img1.png" alt="">
+                    <img id="carousel-slot2" src="./assets/images/img2.png" alt="">
+                    <img id="carousel-slot3" src="./assets/images/img3.png" alt="">
+                </div>
+                <div class="faixa">
+                    <button class="flecha" onclick="next()"> &gt; </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Ion icons CDN -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
