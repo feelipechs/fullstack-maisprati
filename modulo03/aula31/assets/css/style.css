@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+	background: url(../images/capa.png),
+				url(../images/ruido.png),
+				linear-gradient(50deg,#ff4169,#7c26f8);
+	background-attachment: fixed;
+	font-family: Helvetica,Arial,sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    background-color: #000000b2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#logo {
+    width: 20%;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.divisor {
+    width: 1px;
+    background: white;
+    margin: 12px 15px;
+}
+
+#conteudo {
+    margin-top: 25%;
+}
+
+#conteudo h1 {
+    color: #fff;
+    font-size: 3.5em;
+    font-weight: 900;
+}
+
+.btn {
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+#botao-roxo {
+    /* background-color: #5f3dc4; */
+    /*links #9bf0e1*/
+    background-color: #7B25F8;
+    border: none;
+}
+
+#botao-transparente {
+    background-color: rgba(255, 228, 196, 0);
+    border: 1px solid #fff;
+}
+
+#teste {
+    background-color: #fff;
+    margin-top: 25%;
+    width: 100%;
+}
+
+#teste2 {
+    padding: 2%;
+}
+
+.container-imagens {
+    padding: 0;
+}
+
+#imagens {
+    margin: 2%;
+    width: 40%;
+}
+
+.container-texto h2,
+.container-texto h3 {
+    color: #7c26f8;
+    font-weight: 700;
+}
+
+.container-texto2 h2 {
+    color: #fff;
+    font-weight: 700;
+}
+
+.container-texto2 h3 {
+    color: #bae4f8;
+    font-weight: 700;
+}
+
+.container-texto2 p {
+    color: #fff;
+}
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../images/capa.png) top center no-repeat, url(../images/ruido.png) top center repeat, linear-gradient(50deg, #ff4169, #7c26f8);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    background-color: #000000b2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#logo {
+    width: 20%;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.divisor {
+    width: 1px;
+    background: white;
+    margin: 12px 15px;
+}
+
+#conteudo {
+    padding-top: 60px;
+}
+
+#conteudo h1 {
+    color: #fff;
+    font-size: 3.5em;
+    font-weight: 900;
+}
+
+.btn {
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+#botao-roxo {
+    background-color: #5f3dc4;
+    border: none;
+}
+
+#botao-transparente {
+    background-color: rgba(255, 228, 196, 0);
+    border: 1px solid #fff;
+}
+
+#teste {
+    background-color: #fff;
+    margin-top: 25%;
+    width: 100%;
+}
+
+#imagens {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+} */
