@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+html {
+    height: 100%;
+}
+
+#logo {
+    max-width: 300px;
+}
+
+#inicio {
+    margin: auto;
+}
+
+footer {
+    padding: 2px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+/* página serviços */
+
+#servicos {
+    background-color: #F8F9FA;
+    box-shadow: 1px 1px 20px 1px;
+    width: 35vw;
+    min-width: 300px;
+    padding: 0;
+    font-family: 'Kanit';
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+#servicos h5 {
+    background-color: #fff;
+}
+
+#servicos .btn {
+    background-color: #fff;
+    color: blueviolet;
+}
+
+/* página contato */
+
+.contato {
+    background-color: #000;
+    border-radius: 5px;
+    box-shadow: 6px 6px 10px 1px;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    margin-top: 30vh;
+    font-family: 'Kanit';
+    text-align: center;
+}
+
+.contato label {
+    color: #fff;
+}
+
+input, textarea {
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.contato .form-control {
+    width: 80%;
+    margin: auto;
+}
+
+#div-botao {
+    text-align: center;
+}
+
+.btn {
+    margin-bottom: 5px;
+    padding: 2px;
+    width: auto;
+}
+
+#ryder {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    width: 150px;
+}
+
+#teste {
+    max-width: 500px;
+    width: 90%;
+}
+
+#teste h5 {
+    text-align: center;
+}

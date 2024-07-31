@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <title>Los Santos Custom</title>
+</head>
+<body>
+    <nav class="navbar bg-black fixed-top">
+        <div class="container-fluid">
+            <img src="./assets/images/logo.png" alt="" id="logo">
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./servicos.html">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="d-flex align-items-center justify-content-center min-vh-100">
+        <div class="container text-center">
+            <div id="index-content"></div>
+            <button id="load-content-btn" class="btn btn-primary mt-4">Seja bem-vindo a oficina mais lendária do mundo</button>
+        </div>
+    </main>
+
+    <footer>
+        &copy; chaguinhas
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loadContentButton = document.getElementById('load-content-btn');
+
+            if (loadContentButton) {
+                loadContentButton.addEventListener('click', function () {
+                    fetch('index-content.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Rede instável');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const content = `
+                        <h1>${data.welcomeMessage}</h1>
+                        <p>${data.intro}</p>
+                    `;
+                        document.getElementById('index-content').innerHTML = content;
+                    })
+                    .catch(error => {
+                        console.error('Erro ao carregar o conteúdo da página inicial:', error);
+                        document.getElementById('index-content').innerHTML = '<h2>Erro</h2><p>Não foi possível carregar o conteúdo.</p>';
+                    });
+                });
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
