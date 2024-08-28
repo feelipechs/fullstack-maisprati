@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-    background-image: url('./imgs/background.jpg');
-    /* background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+    background: url('./imgs/background.jpg') no-repeat center / cover;
+    /* background-image: url('./imgs/background.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat; */
     display: flex;
@@ -32,7 +35,7 @@ const Login = styled.div`
     /* display: flex;
     flex-direction: column;
     align-items: center; */
-    width: 30vw;
+    width: 20vw;
     max-width: 450px; /* Limita o tamanho máximo da div */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 
@@ -45,14 +48,16 @@ const Login = styled.div`
         /* font-size: 24px; */
         font-weight: 700;
         color: #fff;
+        margin: 5px;
     }
 
     #teste2 {
+        background-color: #0A14157A;
+        color: #fff;
         border-radius: 5px;
         width: 100%;
         height: 40px;
-        margin: 0;
-        padding: 0;
+        margin: 5px;
 
         /*margin-bottom: 10px;
         border: 1px solid #333;
@@ -64,10 +69,10 @@ const Login = styled.div`
     }
 
     button {
+        border-radius: 5px;
         width: 100%;
         height: 40px;
-        margin: 0;
-        padding: 0;
+        margin: 5px;
 
         background-color: #e50914;
         color: #fff;
@@ -86,6 +91,7 @@ const Login = styled.div`
     p {
         /* margin: 10px 0; */
         color: #fff;
+        text-align: center;
     }
 
     a {
@@ -99,7 +105,12 @@ const Login = styled.div`
     }
 
     input[type="checkbox"] {
+        margin: 5px;
         /* margin-right: 5px; */
+    }
+
+    label {
+        color: #fff;
     }
 `;
 
@@ -129,6 +140,7 @@ function LoginScreen() {
                         <p>OU</p>
                         <button>Usar um código de acesso</button>
                         <p>Esqueceu a senha?</p>
+                        <br />
                         <input type="checkbox" id="" name="" />
                         <label htmlFor="">Lembre-se de mim</label>
                         <p>Novo por aqui? <a href="#">Assine Agora</a></p>
