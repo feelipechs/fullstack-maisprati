@@ -55,7 +55,7 @@ const ResultsContainer = styled.div`
     color: #fff;
 `
 
-const IPAddresFinder = () => {
+const IPAddressFinder = () => {
     const [ ip, setIp ] = useState('')
     const [ ipData, setIpData] = useState(null)
 
@@ -88,4 +88,4 @@ const IPAddresFinder = () => {
     )
 }
 
-export default IPAddresFinder
+export default IPAddressFinder
