@@ -1,13 +1,11 @@
+import React from 'react';
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled.div`
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
     background: url('./imgs/background.jpg') no-repeat center / cover;
-    /* background-image: url('./imgs/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,11 +74,6 @@ const Login = styled.div`
 
         background-color: #e50914;
         color: #fff;
-        /*border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        margin-bottom: 15px;*/
         transition: background-color 0.2s;
 
         &:hover {
@@ -114,12 +107,19 @@ const Login = styled.div`
     }
 `;
 
+
 const Logo = styled.img`
-    width: 300px; /* Ajuste o tamanho conforme necessário */
+    width: 300px;
     margin-bottom: 20px;
 `
 
 function LoginScreen() {
+    const navigate = useNavigate();
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        navigate('/movies');
+      };
 
     return (
         <Container>
@@ -136,7 +136,8 @@ function LoginScreen() {
                         {/* <br /> */}
                         <input type="password" id="teste2" name="" placeholder='Senha' />
                         {/* <br /> */}
-                        <button>Entrar</button>
+                        {/* <LoginButton onClick={handleLogin}>Entrar</LoginButton> */}
+                        <button onClick={handleLogin}>Entrar</button>
                         <p>OU</p>
                         <button>Usar um código de acesso</button>
                         <p>Esqueceu a senha?</p>
