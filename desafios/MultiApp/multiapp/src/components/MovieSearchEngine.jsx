@@ -104,7 +104,7 @@ const MovieSearchEngine = () => {
 
     const searchMovies = async () => {
         try {
-            const response = await axios.get(`http://www.omdbapi.com/?s=${query}&apikey=403abbfe`)
+            const response = await axios.get(`https://www.omdbapi.com/?s=${query}&apikey=403abbfe`)
             setMovies(response.data.Search)
         } catch (error) {
             console.error("Error fetching movie data:", error)
