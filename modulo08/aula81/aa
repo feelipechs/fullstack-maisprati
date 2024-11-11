@@ -1,0 +1,24 @@
+Você deve desenvolver e testar uma API para gerenciar uma lista de tarefas (To-Do List). A API deve ser capaz de realizar as seguintes operações:
+
+    Listar todas as tarefas: Uma rota GET que retorna todas as tarefas.
+    Criar uma nova tarefa: Uma rota POST para adicionar uma nova tarefa à lista.
+    Atualizar uma tarefa: Uma rota PUT que permite editar uma tarefa existente.
+    Deletar uma tarefa: Uma rota DELETE para remover uma tarefa da lista.
+
+Cada tarefa deve conter os seguintes campos:
+
+    id: Identificador único da tarefa.
+    title: Título da tarefa.
+    completed: Status da tarefa (verdadeiro para completa e falso para pendente).
+
+Requisitos do Exercício
+
+    Implemente a API usando JavaScript com Node.js e Express.
+
+Escreva testes de integração para as rotas acima, utilizando Jest e Supertest:
+        Verifique se a rota GET retorna todas as tarefas existentes.
+        Teste se a rota POST cria uma nova tarefa corretamente.
+        Verifique se a rota PUT atualiza uma tarefa e retorna a resposta correta.
+        Teste se a rota DELETE remove uma tarefa específica da lista.
+
+    Configuração: Crie um conjunto de dados em memória para armazenar as tarefas durante os testes (sem necessidade de um banco de dados)

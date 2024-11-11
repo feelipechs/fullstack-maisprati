@@ -1,0 +1,9 @@
+version: '3.0'
+
+services:
+  api-teste:
+    build:
+    ports:
+      - "3000:3000"
+    enviroment:
+      - NODE_ENV=development
