@@ -1,1 +1,1 @@
-Trilha Dev Full Stack Jr +praTi e Codifica Edu
+# Repositório para o curso Desenvolvedor Full Stack Jr | +praTi e Codifica Edu
