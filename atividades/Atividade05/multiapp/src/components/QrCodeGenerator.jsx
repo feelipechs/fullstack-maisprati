@@ -46,25 +46,11 @@ const QRCodeContainer = styled.div`
   width: 100%;
 `
 
-const Back = styled.a`
-  margin-top: 10px;
-  text-align: center;
-  color: #007bff;
-  font-size: 14px;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-    color: #0056b3;
-  }
-`;
-
 const QRCodeGenerator = () => {
   const [ text, setText ] = useState('');
 
   return (
     <Container>
-      <Back href="/menu">voltar</Back>
       <Title>Gerador Qr Code</Title>
       <Input 
         type="text"

@@ -97,19 +97,6 @@ const MovieCard = styled.div`
   }
 `
 
-const Back = styled.a`
-  margin-top: 10px;
-  text-align: center;
-  color: #007bff;
-  font-size: 14px;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-    color: #0056b3;
-  }
-`;
-
 const MovieSearchEngine = () => {
   const [ query, setQuery ] = useState('')
   const [ movies, setMovies ] = useState([])
@@ -125,7 +112,6 @@ const MovieSearchEngine = () => {
 
   return (
     <Container>
-      <Back href="/menu">voltar</Back>
       <Title>Movie Search Engine</Title>
       <Input
         type='text'

@@ -51,19 +51,6 @@ const Button = styled.button`
   }
 `
 
-const Back = styled.a`
-  margin-top: 10px;
-  text-align: center;
-  color: #007bff;
-  font-size: 14px;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-    color: #0056b3;
-  }
-`;
-
 const IPAddressFinder = () => {
   const [ ip, setIp ] = useState('')
   const [ ipData, setIpData] = useState(null)
@@ -79,7 +66,6 @@ const IPAddressFinder = () => {
 
   return (
     <Container>
-      <Back href="/menu">voltar</Back>
       <Title>Ip Address Finder</Title>
       <Input
         type="text"
