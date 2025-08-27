@@ -51,41 +51,51 @@ const Button = styled.button`
   }
 `
 
-const ResultsContainer = styled.div`
-    color: #fff;
-`
+const Back = styled.a`
+  margin-top: 10px;
+  text-align: center;
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+`;
 
 const IPAddressFinder = () => {
-    const [ ip, setIp ] = useState('')
-    const [ ipData, setIpData] = useState(null)
+  const [ ip, setIp ] = useState('')
+  const [ ipData, setIpData] = useState(null)
 
-    const ipFinder = async () => {
-        try {
-            const response = await axios.get(`https://ipinfo.io/${ip}/json`)
-            setIpData(response.data)
-        } catch (error) {
-            console.error("Please provide a valid IP address", error)
-        }
+  const ipFinder = async () => {
+    try {
+      const response = await axios.get(`https://ipinfo.io/${ip}/json`)
+        setIpData(response.data)
+    } catch (error) {
+      console.error("Please provide a valid IP address", error)
     }
+  }
 
-    return (
-        <Container>
-            <Title>Ip Address Finder</Title>
-            <Input
-                type="text"
-                value={ip}
-                onChange={(event) => setIp(event.target.value)}
-            />
-            <Button onClick={ipFinder}>Search</Button>
-            {ipData && (
-                <ResultsContainer>
-                    <p><strong>IP:</strong> {ipData.ip}</p>
-                    <p><strong>Location:</strong> {ipData.city}, {ipData.region}, {ipData.country}</p>
-                    <p><strong>ISP:</strong> {ipData.org}</p>
-                </ResultsContainer>
-            )}
-        </Container>
-    )
+  return (
+    <Container>
+      <Back href="/menu">voltar</Back>
+      <Title>Ip Address Finder</Title>
+      <Input
+        type="text"
+        value={ip}
+        onChange={(event) => setIp(event.target.value)}
+      />
+      <Button onClick={ipFinder}>Search</Button>
+      {ipData && (
+        <div>
+          <p><strong>IP:</strong> {ipData.ip}</p>
+          <p><strong>Location:</strong> {ipData.city}, {ipData.region}, {ipData.country}</p>
+          <p><strong>ISP:</strong> {ipData.org}</p>
+        </div>
+      )}
+    </Container>
+  )
 }
 
 export default IPAddressFinder

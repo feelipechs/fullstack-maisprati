@@ -24,7 +24,6 @@ const MenuLink = styled(Link)`
 const MainMenu = () => (
   <MenuContainer>
     <MenuLink to="/ip-address-finder">IP Address Finder</MenuLink>
-    <MenuLink to="/language-translator">Language Translator</MenuLink>
     <MenuLink to="/qr-code-generator">QR Code Generator</MenuLink>
     <MenuLink to="/movie-search-engine">Movie Search Engine</MenuLink>
   </MenuContainer>

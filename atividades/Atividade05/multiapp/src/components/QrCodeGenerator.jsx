@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import QRCode from 'qrcode.react'
-import ReactDOM from 'react-dom'
 
 const Container = styled.div`
   display: flex;
@@ -47,24 +46,38 @@ const QRCodeContainer = styled.div`
   width: 100%;
 `
 
-const QRCodeGenerator = () => {
-    const [ text, setText ] = useState('');
+const Back = styled.a`
+  margin-top: 10px;
+  text-align: center;
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: none;
 
-    return (
-        <Container>
-            <Title>Gerador Qr Code</Title>
-            <Input 
-                type="text"
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-            />
-            {text && (
-                <QRCodeContainer>
-                    <QRCode value={text} size={256}/>
-                </QRCodeContainer>
-            )}
-        </Container>
-    )
+  &:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+`;
+
+const QRCodeGenerator = () => {
+  const [ text, setText ] = useState('');
+
+  return (
+    <Container>
+      <Back href="/menu">voltar</Back>
+      <Title>Gerador Qr Code</Title>
+      <Input 
+        type="text"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
+      {text && (
+        <QRCodeContainer>
+          <QRCode value={text} size={256}/>
+        </QRCodeContainer>
+      )}
+    </Container>
+  )
 }
 
 export default QRCodeGenerator

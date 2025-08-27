@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-// import axios from 'axios'
 import styled from 'styled-components'
 
 // Styled Components
@@ -51,48 +50,67 @@ const Button = styled.button`
   }
 `;
 
+const ForgotLink = styled.a`
+  margin-top: 10px;
+  text-align: center;
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+`;
+
 const LoginScreen = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const navigate = useNavigate();
-    
-    const handleLogin = (e) => {
-        e.preventDefault();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+  
+  const handleLogin = (e) => {
+    e.preventDefault();
 
-        const simulatedEmail = 'admin@example.com';
-        const simulatedPassword = '123';
-    
-        if (email === simulatedEmail && password === simulatedPassword) {
+    const simulatedEmail = 'admin@example.com';
+    const simulatedPassword = '123';
 
-          const simulatedToken = 'fake-jwt-token';
-          localStorage.setItem('jwtToken', simulatedToken);
-    
-          navigate('/menu');
-        } else {
-          console.error('Login failed: Invalid email or password');
-        }
-      };
-    
-      return (
-        <Container>
-          <LoginForm onSubmit={handleLogin}>
-            <Title>Login</Title>
-            <Input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <Input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <Button type="submit">Login</Button>
-          </LoginForm>
-        </Container>
-      );
+    if (email === simulatedEmail && password === simulatedPassword) {
+
+      const simulatedToken = 'fake-jwt-token';
+      localStorage.setItem('jwtToken', simulatedToken);
+
+      navigate('/menu');
+    } else {
+      console.error('Login failed: Invalid email or password');
+    }
+  };
+
+  const handleForgotLogin = (e) => {
+    e.preventDefault();
+    alert('email: admin@example.com | senha: 123');
+  };
+  
+  return (
+    <Container>
+      <LoginForm onSubmit={handleLogin}>
+        <Title>Login</Title>
+        <Input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <Input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button type="submit">Login</Button>
+        <ForgotLink onClick={handleForgotLogin}>Esqueceu o login?</ForgotLink>
+      </LoginForm>
+    </Container>
+  );
 }
 
 export default LoginScreen
