@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
+import Header from './Header'
 
 const Container = styled.div`
   display: flex;
@@ -111,24 +112,27 @@ const MovieSearchEngine = () => {
   }
 
   return (
-    <Container>
-      <Title>Movie Search Engine</Title>
-      <Input
-        type='text'
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-      />
-      <Button onClick={searchMovies}>Search</Button>
-      <MoviesContainer>
-        {movies && movies.map((movie) => (
-          <MovieCard key={movie.imdbID}>
-            <img src={movie.Poster} alt={`${movie.Title} Poster`} />
-            <h3>{movie.Title}</h3>
-            <p>{movie.Year}</p>
-          </MovieCard>
-        ))}
-      </MoviesContainer>
-    </Container>
+    <>
+      <Header />
+      <Container>
+        <Title>Movie Search Engine</Title>
+        <Input
+          type='text'
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+        />
+        <Button onClick={searchMovies}>Search</Button>
+        <MoviesContainer>
+          {movies && movies.map((movie) => (
+            <MovieCard key={movie.imdbID}>
+              <img src={movie.Poster} alt={`${movie.Title} Poster`} />
+              <h3>{movie.Title}</h3>
+              <p>{movie.Year}</p>
+            </MovieCard>
+          ))}
+        </MoviesContainer>
+      </Container>
+    </>
   )
 }
 

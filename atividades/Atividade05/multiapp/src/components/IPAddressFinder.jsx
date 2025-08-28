@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
+import Header from './Header'
 
 const Container = styled.div`
   display: flex;
@@ -65,22 +66,25 @@ const IPAddressFinder = () => {
   }
 
   return (
-    <Container>
-      <Title>Ip Address Finder</Title>
-      <Input
-        type="text"
-        value={ip}
-        onChange={(event) => setIp(event.target.value)}
-      />
-      <Button onClick={ipFinder}>Search</Button>
-      {ipData && (
-        <div>
-          <p><strong>IP:</strong> {ipData.ip}</p>
-          <p><strong>Location:</strong> {ipData.city}, {ipData.region}, {ipData.country}</p>
-          <p><strong>ISP:</strong> {ipData.org}</p>
-        </div>
-      )}
-    </Container>
+    <>
+      <Header />
+      <Container>
+        <Title>Ip Address Finder</Title>
+        <Input
+          type="text"
+          value={ip}
+          onChange={(event) => setIp(event.target.value)}
+        />
+        <Button onClick={ipFinder}>Search</Button>
+        {ipData && (
+          <div>
+            <p><strong>IP:</strong> {ipData.ip}</p>
+            <p><strong>Location:</strong> {ipData.city}, {ipData.region}, {ipData.country}</p>
+            <p><strong>ISP:</strong> {ipData.org}</p>
+          </div>
+        )}
+      </Container>
+    </>
   )
 }
 

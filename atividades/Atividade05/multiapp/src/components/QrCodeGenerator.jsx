@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import QRCode from 'qrcode.react'
+import Header from './Header'
 
 const Container = styled.div`
   display: flex;
@@ -50,19 +51,22 @@ const QRCodeGenerator = () => {
   const [ text, setText ] = useState('');
 
   return (
-    <Container>
-      <Title>Gerador Qr Code</Title>
-      <Input 
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
-      {text && (
-        <QRCodeContainer>
-          <QRCode value={text} size={256}/>
-        </QRCodeContainer>
-      )}
-    </Container>
+    <>
+      <Header />
+      <Container>
+        <Title>Gerador Qr Code</Title>
+        <Input 
+          type="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        {text && (
+          <QRCodeContainer>
+            <QRCode value={text} size={256}/>
+          </QRCodeContainer>
+        )}
+      </Container>
+    </>
   )
 }
 

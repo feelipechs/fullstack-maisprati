@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Header from './Header';
 
 const MenuContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 20px;
 `;
@@ -22,11 +24,14 @@ const MenuLink = styled(Link)`
 `;
 
 const MainMenu = () => (
-  <MenuContainer>
-    <MenuLink to="/ip-address-finder">IP Address Finder</MenuLink>
-    <MenuLink to="/qr-code-generator">QR Code Generator</MenuLink>
-    <MenuLink to="/movie-search-engine">Movie Search Engine</MenuLink>
-  </MenuContainer>
+  <>
+    <Header />
+    <MenuContainer>
+      <MenuLink to="/ip-address-finder">IP Address Finder</MenuLink>
+      <MenuLink to="/qr-code-generator">QR Code Generator</MenuLink>
+      <MenuLink to="/movie-search-engine">Movie Search Engine</MenuLink>
+    </MenuContainer>
+  </>
 );
 
 export default MainMenu;
